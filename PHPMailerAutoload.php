@@ -1,4 +1,4 @@
-<?php
+/**<?php
 /**
  * PHPMailer SPL autoloader.
  * PHP Version 5
@@ -48,4 +48,4 @@ if (version_compare(PHP_VERSION, '5.1.2', '>=')) {
     //    PHPMailerAutoload($classname);
     //}
     //
-}
+}*/
