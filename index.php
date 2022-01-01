@@ -19,6 +19,7 @@ $imageFile = file_get_contents($imageUrl);
 
 //include('class.smtp.php');
 include('PHPMailerAutoload.php');
+include('PHPMailer.php');
 
 $html=$message = '
 <html>
