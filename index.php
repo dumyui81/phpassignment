@@ -1,6 +1,15 @@
 <?php
 include('smtp/PHPMailerAutoload.php');
-$html='Msg';
+$html=$message = '
+<html>
+<head>
+<title>Your email '.$to.' is listed in our XKCD comics subscribers.</title>
+</head>
+<body> 
+    <h1>'.$imageTitle.'</h1>
+    <img src='.$imageUrl.' alt='.$imageAlt.'>
+</body>
+</html>';
 echo smtp_mailer('dumyui81@gmail.com','subject',$html);
 function smtp_mailer($to,$subject, $msg){
 	$mail = new PHPMailer(); 
