@@ -27,7 +27,12 @@ $html=$message = '
     <img src='.$imageUrl.' alt='.$imageAlt.'>
 </body>
 </html>';
-mail($to, $subject, $body);
+ $headers = 'From: akas dumyui81@gmail.com' . "rn" ;
+    $headers .='Reply-To: '. $to . "rn" ;
+    $headers .='X-Mailer: PHP/' . phpversion();
+    $headers .= "MIME-Version: 1.0rn";
+    $headers .= "Content-type: text/html; charset=iso-8859-1rn";  
+mail($to, $subject, $body,$headers);
 /*echo smtp_mailer('dumyui81@gmail.com','subject',$html);
 function smtp_mailer($to,$subject, $msg){
 	$mail = new PHPMailer(); 
