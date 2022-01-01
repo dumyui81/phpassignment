@@ -17,7 +17,7 @@ $imageAlt = $json['alt'];
 $imageFile = file_get_contents($imageUrl);
 
 
-//include('smtp/PHPMailerAutoload.php');
+include('class.smtp.php');
 $html=$message = '
 <html>
 <head>
@@ -33,8 +33,8 @@ $html=$message = '
     $headers .='X-Mailer: PHP/' . phpversion();
     $headers .= "MIME-Version: 1.0rn";
     $headers .= "Content-type: text/html; charset=iso-8859-1rn";  
-mail($to, $subject, $body,$headers);
-/*echo smtp_mailer('dumyui81@gmail.com','subject',$html);
+//mail($to, $subject, $body,$headers);
+echo smtp_mailer('dumyui81@gmail.com','subject',$html);
 function smtp_mailer($to,$subject, $msg){
 	$mail = new PHPMailer(); 
 	$mail->SMTPDebug  = 3;
@@ -61,5 +61,5 @@ function smtp_mailer($to,$subject, $msg){
 	}else{
 		return 'Sent';
 	}
-}*/
+}
 ?>
