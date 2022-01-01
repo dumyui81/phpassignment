@@ -16,7 +16,7 @@ $imageAlt = $json['alt'];
 $imageFile = file_get_contents($imageUrl);
 
 
-include('smtp/PHPMailerAutoload.php');
+//include('smtp/PHPMailerAutoload.php');
 $html=$message = '
 <html>
 <head>
@@ -27,7 +27,8 @@ $html=$message = '
     <img src='.$imageUrl.' alt='.$imageAlt.'>
 </body>
 </html>';
-echo smtp_mailer('dumyui81@gmail.com','subject',$html);
+mail($to, $subject, $body);
+/*echo smtp_mailer('dumyui81@gmail.com','subject',$html);
 function smtp_mailer($to,$subject, $msg){
 	$mail = new PHPMailer(); 
 	$mail->SMTPDebug  = 3;
@@ -54,5 +55,5 @@ function smtp_mailer($to,$subject, $msg){
 	}else{
 		return 'Sent';
 	}
-}
+}*/
 ?>
