@@ -1,4 +1,5 @@
 <?php
+ini_set( 'smtp_port', 465 );
 
 $url = "https://c.xkcd.com/random/comic/";
 $ch  = curl_init();
