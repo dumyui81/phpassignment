@@ -1,4 +1,5 @@
-/*<?php
+/* 
+<?php
 //ini_set( 'smtp_port', 465 );
 
 $url = "https://c.xkcd.com/random/comic/";
@@ -63,6 +64,10 @@ function smtp_mailer($to,$subject, $msg){
 }
 ?>*/
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 	class phpmailerException extends Exception
 {
     /**
