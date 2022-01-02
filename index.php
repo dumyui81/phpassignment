@@ -1,7 +1,7 @@
 
 <?php
 //ini_set( 'smtp_port', 465 );
-
+/*
 $url = "https://c.xkcd.com/random/comic/";
 $ch  = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -62,11 +62,8 @@ function smtp_mailer($to,$subject, $msg){
 		return 'Sent';
 	}
 }
-?>
-/*
-<?php
+*/
 
-<?php
 /**
  * PHPMailer - PHP email creation and transport class.
  * PHP Version 5
